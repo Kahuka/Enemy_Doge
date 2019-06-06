@@ -5,10 +5,14 @@ using UnityEngine;
 public class PlayerControll : MonoBehaviour
 {
     public float moveSpeed;
+
     private Animator anim;
     private bool playerMoving;
+
     private Vector2 lastMove;
     private Rigidbody2D myRigidBody;
+
+    private static bool playerExists;  
 
     
     // Start is called before the first frame update
@@ -16,8 +20,16 @@ public class PlayerControll : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         myRigidBody = GetComponent<Rigidbody2D>();
+        if (!playerExists)
+        {
+            playerExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 
-        DontDestroyOnLoad(transform.gameObject);
     }
 
     // Update is called once per frame
