@@ -75,16 +75,18 @@ public class ZombieMove : MonoBehaviour
                 }
             }
 
-            if (reloding)
-            {
-                waitToReload -= Time.deltaTime;
-                if (waitToReload < 0f)
-                {
-                    SceneManager.LoadScene("Land");
-                    thePlayer.SetActive(true);
-                }
-            }
 
+
+        }
+
+        if (reloding)
+        {
+            waitToReload -= Time.deltaTime;
+            if (waitToReload < 0f)
+            {
+                SceneManager.LoadScene("Land");
+                thePlayer.SetActive(true);
+            }
         }
 
 

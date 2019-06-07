@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cave.unity
     guid: 24f25c855397e334fb0f2cc667300f94
+  - enabled: 1
+    path: Assets/Scenes/Mushland.unity
+    guid: ce6221b414e6c1d48b578710827a440d
   m_configObjects: {}
